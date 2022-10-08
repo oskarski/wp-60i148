@@ -1,0 +1,43 @@
+// LIBS
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/bootstrap-4-grid/scss/grid";
+$fa-font-path: '../../node_modules/font-awesome/fonts';
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/modaal/source/css/modaal";
+$slick-font-path: "../../node_modules/slick-carousel/slick/fonts/";
+$slick-loader-path: "../../node_modules/slick-carousel/slick/";
+@import "../../node_modules/slick-carousel/slick/slick";
+@import "../../node_modules/slick-carousel/slick/slick-theme";
+@import "~lightgallery/dist/css/lightgallery.min.css";
+@import "~lightgallery/dist/css/lg-transitions.min.css";
+
+@import "utils/fonts";
+@import "utils/icons";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/typography";
+@import "utils/global";
+
+// PARTIALS
+@import "views/partials/header";
+@import "views/partials/footer";
+
+// COMPONENTS
+@import "views/components/cookie-notification";
+@import "views/components/page-slider";
+@import "views/components/loader";
+@import "views/components/posts-list";
+@import "views/components/welcome-banner";
+@import "views/components/gallery-banner";
+@import "views/components/contact-info";
+@import "views/components/map";
+@import "views/components/contact-people";
+
+// VIEWS
+@import "views/main";
+@import "views/gallery";
+@import "views/single-gallery";
+@import "views/about-us";
+@import "views/download";
+@import "views/hero";
+@import "views/one-percent";

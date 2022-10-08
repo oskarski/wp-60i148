@@ -1,0 +1,48 @@
+.cookie-notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px 45px 10px 10px;
+  background: rgba(228, 230, 240, .82);
+  z-index: 9998;
+  text-align: center;
+  p {
+    margin-bottom: 0;
+    line-height: 1.7;
+    a {
+      font-size: inherit;
+    }
+  }
+  button {
+    @include reset-button();
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    &:hover {
+      &:before, &:after {
+        background: $accent-hover-color;
+      }
+    }
+    &:before, &:after {
+      @include transition();
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      background: $accent-color;
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

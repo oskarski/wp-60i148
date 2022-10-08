@@ -1,0 +1,11 @@
+.main-page {
+  section {
+    margin: 100px auto 80px;
+  }
+}
+
+@include media-md-down(){
+  .main-page{
+    margin-top: 40px;
+  }
+}

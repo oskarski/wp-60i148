@@ -1,0 +1,10 @@
+# Security
+<Files *.php>
+Order allow,deny
+Deny from all
+</Files>
+# Exception file example
+#<Files example.php>
+#Allow from all
+#</Files>
+# Security End

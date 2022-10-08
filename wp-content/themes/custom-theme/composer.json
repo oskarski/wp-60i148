@@ -1,0 +1,13 @@
+{
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": { "" : "" }
+    },
+    "require": {
+      "rlanvin/php-form": "^2.0",
+      "vlucas/phpdotenv": "^2.5",
+      "symfony/var-dumper": "^4.1"
+    }
+}

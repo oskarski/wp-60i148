@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+${require('./partials/head.html')}
+<body>
+${require('./partials/header.html')}
+<main class="main-content">
+    <div class="download-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-6" id="download-list">
+                    <h1>Do pobrania</h1>
+                    <h3>Stopnie harcerskie:</h3>
+                    <ul>
+                        <li>
+                            <a download href="http://localhost:3000/src/pdfs/%C4%86wik.pdf">Próba Harcerza</a>
+                        </li>
+                        <li>
+                            <a download href="src/pdfs/Młodzik.pdf">Młodzik</a>
+                        </li>
+                        <li>
+                            <a download href="src/pdfs/Wywiadowca.pdf">Wywiadowca</a>
+                        </li>
+                        <li>
+                            <a download href="src/pdfs/Odkrywca.pdf">Odkrywca</a>
+                        </li>
+                        <li>
+                            <a download href="src/pdfs/Ćwik.pdf">Ćwik</a>
+                        </li>
+                        <li>
+                            <a download href="src/pdfs/Harcerz Orli.pdf">Harcerz Orli</a>
+                        </li>
+                    </ul>
+                    <h3>Plakietki:</h3>
+                    <ul>
+                        <li>
+                            <a download href="src/pdfs/Plakietka Szczepu.pdf">Plakietka Szczepu</a>
+                        </li>
+                        <li>
+                            <a download href="src/pdfs/Plakietka Hufca.pdf">Plakietka Hufca</a>
+                        </li>
+                    </ul>
+                    <h3>Inne</h3>
+                    <ul>
+                        <li><a download href="src/pdfs/Sprawności.pdf">Zbiór Sprawności</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div id="pdf_view"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+${require('./partials/footer.html')}
+</body>
+</html>

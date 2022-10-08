@@ -1,0 +1,31 @@
+.download-page {
+  h3 {
+    margin-top: 10px;
+    text-decoration: underline;
+  }
+  ul {
+    li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .pdfobject-container {
+    height: 100%;
+    border: 5px solid $accent-color;
+  }
+  .pdfobject {
+    border: 1px solid $accent-color;
+  }
+}
+
+@include media-md-down(){
+  .container{
+  div.pdfobject-container {
+    display: none;
+  }
+
+  div.pdfobject {
+    display: none;
+  }
+}
+}

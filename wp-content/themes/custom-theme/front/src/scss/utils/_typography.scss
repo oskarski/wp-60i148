@@ -1,0 +1,211 @@
+*, html, body {
+  font-size: 14px;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  color: $primary-color;
+  &::selection {
+    background: transparentize($accent-color, 0.15);
+    color: #fff;
+  }
+}
+
+h1, h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 0 0 .67em;
+}
+
+h1, .h1 {
+  @include typography(60px, 300, 1.18, -0.5px);
+}
+
+h2, .h2 {
+  @include typography(48px, 500, 1.18, 0);
+}
+
+h3, .h3 {
+  @include typography(34px, 500, 1.17, 0.25px);
+}
+
+h4, .h4 {
+  @include typography(24px, 500, 1.16, 0);
+}
+
+h5, .h5 {
+  @include typography(20px, 700, 1.2, 0.15px);
+}
+
+h6, .h6 {
+  @include typography(16px, 700, 1.5, 0.15px);
+}
+
+p, .paragraph, .text {
+  @include typography(16px, 500, 1.75, 0.5px);
+  color: $secondary-color;
+  margin: 1em 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  a {
+
+  }
+  strong, em, b, i {
+    @include typography(inherit, inherit, inherit, inherit);
+  }
+  strong, b {
+    color: $primary-color;
+    font-weight: bold;
+  }
+  em, i {
+    color: inherit;
+    font-style: italic;
+  }
+}
+
+.small-text {
+  @extend .text;
+  @include typography(14px, 500, 1.43, 0.25px);
+}
+
+a {
+  @include typography(inherit, inherit, inherit, inherit);
+  @include transition();
+  text-decoration: none;
+  color: $accent-color;
+  &:hover {
+    color: $accent-hover-color;
+  }
+}
+
+ul, ol {
+  @include typography(inherit, inherit, inherit, inherit);
+  color: inherit;
+  list-style: circle;
+  padding-left: 30px;
+  li {
+    @include typography(inherit, inherit, inherit, inherit);
+    color: inherit;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+form {
+  label {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    &.error {
+      color: $red;
+    }
+  }
+  input, textarea {
+    @include placeholder($primary-color);
+    @include no-apperance();
+    @include reset-input();
+    font-size: 16px;
+    padding: 7px 10px;
+    display: block;
+    width: 100%;
+    border: 1px solid transparentize($primary-color, .5);
+    margin-bottom: 15px;
+    &:focus, &:active {
+      border-color: $primary-color;
+    }
+    &.error {
+      color: $red;
+      border-color: $red;
+    }
+  }
+  input {
+
+  }
+  textarea {
+    resize: vertical;
+    min-height: 148px;
+  }
+  input[type="radio"] {
+
+  }
+  input[type="checkbox"] {
+
+  }
+  select {
+
+  }
+  button, input[type="submit"] {
+    @extend .btn-primary;
+    @extend .btn-big;
+  }
+}
+
+blockquote {
+  border-top: 3px solid $secondary-color;
+  border-bottom: 3px solid $secondary-color;
+  margin: 27px 0;
+  font-style: italic;
+  font-weight: 300;
+  position: relative;
+  padding: 25px 13px 30px 110px;
+  font-size: 18px;
+  color: $secondary-color;
+  &:before {
+    content: '\f10d';
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    font-size: 60px;
+    color: $accent-color;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  cite {
+    display: block;
+    text-align: right;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+}
+
+@include media-sm-down() {
+  h1, h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin: 0 0 .48em;
+  }
+
+  h1, .h1 {
+    font-size: 48px;
+  }
+
+  h2, .h2 {
+    font-size: 34px;
+  }
+
+  h3, .h3 {
+    font-size: 27px;
+  }
+
+  h4, .h4 {
+    font-size: 24px;
+  }
+
+  h5, .h5 {
+    font-size: 20px;
+  }
+
+  h6, .h6 {
+    font-size: 16px;
+  }
+}

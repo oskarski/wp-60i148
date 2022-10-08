@@ -1,0 +1,38 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  > svg {
+    width: 270px;
+    > g {
+      @include transition();
+      animation: loader-animation 1.5s infinite;
+    }
+  }
+  &.hidden {
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes loader-animation {
+  0% {
+    fill: $accent-color;
+  }
+  50% {
+    fill: #000;
+  }
+  100% {
+    fill: $accent-color;
+  }
+}

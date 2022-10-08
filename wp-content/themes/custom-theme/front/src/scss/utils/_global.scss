@@ -1,0 +1,63 @@
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.text-accent {
+  color: $accent-color;
+}
+
+.btn {
+  @include reset-button();
+  padding: .5em .9em;
+  border-radius: 3px;
+  color: $white;
+  display: inline-block;
+}
+
+.btn-primary {
+  @extend .btn;
+  background: $accent-color;
+  &:hover, &:focus {
+    background: $accent-hover-color;
+    color: $white;
+  }
+}
+
+.btn-md {
+  padding: .6em 1.2em;
+  font-size: 1.1em;
+}
+
+.btn-big {
+  padding: .7em 1.5em;
+  font-size: 1.3em;
+}
+
+.read-more {
+  display: flex;
+  justify-content: center;
+  margin: 45px auto 30px;
+}
+
+#lg-counter, .lg-toolbar .lg-icon, .lg-actions .lg-next, .lg-actions .lg-prev {
+  &, &:hover, > span {
+    color: $white;
+  }
+}
+
+.gallery-page, .single-gallery-page, .contact-page, .about-us-page, .download-page, .hero-page {
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+
+@include media-sm-down() {
+  .gallery-page, .single-gallery-page, .contact-page, .about-us-page, .download-page, .hero-page {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
+}

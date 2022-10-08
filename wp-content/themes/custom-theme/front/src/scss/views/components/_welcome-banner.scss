@@ -1,0 +1,35 @@
+.welcome-banner {
+  h1 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}
+
+.welcome-banner__video {
+  padding: 7px;
+  background: $accent-color;
+  &, iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@include media-lg-down() {
+  .welcome-banner__video {
+    iframe {
+      min-height: 300px;
+    }
+  }
+}
+
+@include media-sm-down() {
+  h1 {
+    font-size: 39px;
+  }
+}
+
+@include media-xs-down() {
+  h1 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*) http://gcadmin.ayz.pl/wp-polskanaj/wp-content/uploads/$1
+</IfModule>
+

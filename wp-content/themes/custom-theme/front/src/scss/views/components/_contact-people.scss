@@ -1,0 +1,86 @@
+.contact-people {
+  margin-top: 80px;
+  text-align: center;
+  img {
+    border-radius: 50%;
+    width: 148px;
+    height: 148px;
+  }
+  h5 {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  h6 {
+    margin-top: 0;
+    font-size: 14px;
+  }
+  .slick-prev, .slick-next {
+    @include reset-button();
+    z-index: 9;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    &:before, &:after {
+      content: '';
+      opacity: 1;
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: $primary-color;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 30%;
+    }
+  }
+
+  .slick-prev {
+    left: 15px;
+    &:before {
+      transform: translateX(-50%) rotate(-45deg);
+    }
+    &:after {
+      transform: translateX(-50%) rotate(45deg);
+      top: 70%;
+    }
+  }
+
+  .slick-next {
+    right: 15px;
+    &:before {
+      transform: translateX(-50%) rotate(-45deg);
+      top: 70%;
+    }
+    &:after {
+      transform: translateX(-50%) rotate(45deg);
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    button {
+      @include reset-button();
+      background: transparentize($primary-color, .5);
+      border: none;
+      border-radius: 50%;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: 0 6px;
+      padding: 0;
+      box-sizing: content-box;
+      &:before {
+        content: none;
+      }
+    }
+    .slick-active {
+      button {
+        background: $primary-color;
+      }
+    }
+  }
+}
